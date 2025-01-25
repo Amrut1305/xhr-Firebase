@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xhr Firbase</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 my-3">
+      <div class="card">
+        <div class="card-body">
+          <form id="postForm">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="content">Content</label>
+              <textarea id="content" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="userId">User ID</label>
+              <select id="userId" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="btn-section">
+              <button type="submit" class="btn btn-info w-100 mb-2" id="addForm">Add Form</button>
+              <button type="button" class="btn btn-info w-100 mb-2 d-none" id="updateForm">Update Form</button>
+              <button type="button" class="btn btn-warning w-100" id="canceForm">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 offset-md-3 mb-3 d-flex flex-column-reverse" id="showCard">
+      <!-- <div class="card">
+        <div class="card-header" id="id">Title</div>
+        <div class="card-body">Content</div>
+        <div class="card-footer d-flex justify-content-between">
+          <button class="btn btn-primary" onclick="onEdit(this)">Edit</button>
+          <button class="btn btn-danger" onclick="onRemove(this)">Romove</button>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
 
 
+<div class="spinner-border m-5 d-none" role="status" id="loader">
+  <span class="visually-hidden">Loading...</span>
+</div>
 
+<body>
+  <script src="app.js"></script>
+</body>
 
-  
-  <body>
-    <script src="app.js"></script>
-  </body>
 </html>
